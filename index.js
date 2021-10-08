@@ -8,23 +8,23 @@ const bodyParser = require("body-parser")
 app.use(bodyParser.urlencoded({ extended: false }))
 const mongoose = require('mongoose')
 
-// const { MongoClient } = require('mongodb');
-// const uri = "mongodb+srv://bulbul:nadeem%40123456@cluster0.wyeg4.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
-// const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
-// client.connect(err => {
-//   const collection = client.db("test").collection("devices");
-//   client.close();
-// });
+const { MongoClient } = require('mongodb');
+const uri = "mongodb+srv://bulbul:nadeem%40123456@cluster0.wyeg4.mongodb.net/test";
+const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+client.connect(err => {
+  const collection = client.db("test").collection("devices");
+  client.close();
+});
 
-mongoose.connect('mongodb://localhost:27017/infograin?readPreference=primary&appname=MongoDB%20Compass&ssl=false', {
-    useUnifiedTopology: true,
-    useNewUrlParser: true
-  })
-  .then(() => {
-    console.log('Connected to the Database successfully');
-  }).catch((err)=>{
-    console.log(err);
-  });
+// mongoose.connect('mongodb://localhost:27017/infograin?readPreference=primary&appname=MongoDB%20Compass&ssl=false', {
+//     useUnifiedTopology: true,
+//     useNewUrlParser: true
+//   })
+//   .then(() => {
+//     console.log('Connected to the Database successfully');
+//   }).catch((err)=>{
+//     console.log(err);
+//   });
 
 
 
