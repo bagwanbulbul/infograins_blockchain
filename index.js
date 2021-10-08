@@ -11,9 +11,9 @@ const mongoose = require('mongoose')
 const { MongoClient } = require('mongodb');
 const uri = "mongodb+srv://bulbul:nadeem%40123456@cluster0.wyeg4.mongodb.net/test";
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
-client.connect(err => {
-  const collection = client.db("infograins").collection("user");
-  client.close();
+mongoose.connect(err => {
+  const collection = mongoose.db("infograins").collection("user");
+  mongoose.close();
 });
 
 // mongoose.connect('mongodb://localhost:27017/infograin?readPreference=primary&appname=MongoDB%20Compass&ssl=false', {
