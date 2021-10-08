@@ -29,7 +29,6 @@ app.use(bodyParser.urlencoded({ extended: false }))
 
 
 app.post("/send_mail",  (req, res) => {
-    console.log('item')
     var userData = {       
         firstName: req.body.FNAME,
        lastName:  req.body.LNAME,
