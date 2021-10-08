@@ -2376,3 +2376,12 @@ input:checked+.stylised-checkbox {
     align-items: center;
     border-radius: 50%;
 }
+
+.contact_deatils{
+    background: #fff;
+    font-size: 14px;
+}
+
+.top_bar{
+    background: #fff;
+}

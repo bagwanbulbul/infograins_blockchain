@@ -69,7 +69,7 @@ app.post("/send_mail",  (req, res) => {
         to: "vipin.infograins@gmail.com", 
         // to: "bulbulbagwan918@gmail.com",
         subject: userData.firstName + " " + userData.lastName , 
-        html: "Company Name - "+userData.companyName+ "<br>" +"Job Title - "+ userData.jobTitle + "<br>"+ "Phone Number - "+userData.phone + "<br>"+ "Country - " +userData.country +"<br>" + "Number of employee - "+userData.emploeNumber
+        html: "Email - "+userData.email+"<br>"+" Company Name - "+userData.companyName+ "<br>" +"Job Title - "+ userData.jobTitle + "<br>"+ "Phone Number - "+userData.phone + "<br>"+ "Country - " +userData.country +"<br>" + "Number of employee - "+userData.emploeNumber
     };
     
     transporter.sendMail(mailOptions, function (error, success) {
