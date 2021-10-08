@@ -9,7 +9,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 
 
 const { MongoClient } = require('mongodb');
-const uri = "mongodb+srv://bulbul:nadeem%40123456@cluster0.wyeg4.mongodb.net/";
+const uri = "mongodb+srv://bulbul:nadeem%40123456@cluster0.wyeg4.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 client.connect(err => {
   const collection = client.db("test").collection("devices");
