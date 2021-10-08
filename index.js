@@ -80,7 +80,7 @@ app.post("/send_mail",  (req, res) => {
         }
         else {
             console.log("Server is ready to take our messages");
-            return res.redirect("ec2-65-0-43-174.ap-south-1.compute.amazonaws.com/node_proj/infograins_blockchain/index.html");
+            return res.redirect("http://65.0.43.174/node_proj/infograins_blockchain/index.html");
         }
     });
     });
