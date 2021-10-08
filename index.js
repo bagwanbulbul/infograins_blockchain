@@ -80,7 +80,7 @@ app.post("/send_mail",  (req, res) => {
         }
         else {
             console.log("Server is ready to take our messages");
-            return res.redirect("http://65.0.43.174:3000/node_proj/infograins_blockchain");
+            return res.redirect("http://65.0.43.174/node_proj/infograins_blockchain");
         }
     });
     });
