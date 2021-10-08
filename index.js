@@ -6,15 +6,15 @@ const nodemailer = require("nodemailer");
 var Users = require ("./user")
 const bodyParser = require("body-parser")
 app.use(bodyParser.urlencoded({ extended: false }))
-const mongoose = require('mongoose')
+// const mongoose = require('mongoose')
 
-const { MongoClient } = require('mongodb');
-const uri = "mongodb+srv://bulbul:nadeem%40123456@cluster0.wyeg4.mongodb.net/test";
-const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
-mongoose.connect(err => {
-  const collection = mongoose.db("infograins").collection("user");
-  mongoose.close();
-});
+// const { MongoClient } = require('mongodb');
+// const uri = "mongodb+srv://bulbul:nadeem%40123456@cluster0.wyeg4.mongodb.net/infograins";
+// const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+// client.connect(err => {
+// //   const collection = client.db("infograins").collection("devices");
+//   client.close();
+// });
 
 // mongoose.connect('mongodb://localhost:27017/infograin?readPreference=primary&appname=MongoDB%20Compass&ssl=false', {
 //     useUnifiedTopology: true,
@@ -40,16 +40,17 @@ app.post("/send_mail",  (req, res) => {
         country:  req.body.MMERGE6,
         emploeNumber:   req.body.MMERGE3
     }
-    var myData = new Users(userData);
-    myData.save().then(item => {
-        console.log(item)
-    console.log("testing item");
+    // var userData = new Users(userData);
+    // myData.save().then(item => {
+    //     console.log(item)
+    // console.log("testing item");
 
-        // res.status(200).json({message:"item saved to database", data: item});
-    }).catch(err => {
-        console.log(err);
-        // res.status(400).send("unable to save to database");
-    })
+    //     // res.status(200).json({message:"item saved to database", data: item});
+    // }).catch(err => {
+    //     console.log('err')
+    //     console.log(err);
+    //     // res.status(400).send("unable to save to database");
+    // })
     
     let transporter = nodemailer.createTransport(
         {
@@ -65,11 +66,11 @@ app.post("/send_mail",  (req, res) => {
     );
     
     let mailOptions = {
-        from: myData.email,
+        from: userData.email,
         to: "vipin.infograins@gmail.com", 
         // to: "bulbulbagwan918@gmail.com",
-        subject: myData.firstName + " " + myData.lastName , 
-        html: "Company Name - "+myData.companyName+ "<br>" +"Job Title - "+ myData.jobTitle + "<br>"+ "Phone Number - "+myData.phone + "<br>"+ "Country - " +myData.country +"<br>" + "Number of employee - "+myData.emploeNumber
+        subject: userData.firstName + " " + userData.lastName , 
+        html: "Company Name - "+userData.companyName+ "<br>" +"Job Title - "+ userData.jobTitle + "<br>"+ "Phone Number - "+userData.phone + "<br>"+ "Country - " +userData.country +"<br>" + "Number of employee - "+userData.emploeNumber
     };
     
     transporter.sendMail(mailOptions, function (error, success) {
