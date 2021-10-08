@@ -6,32 +6,30 @@ const nodemailer = require("nodemailer");
 var Users = require ("./user")
 const bodyParser = require("body-parser")
 app.use(bodyParser.urlencoded({ extended: false }))
+const mongoose = require('mongoose')
 
+// const { MongoClient } = require('mongodb');
+// const uri = "mongodb+srv://bulbul:nadeem%40123456@cluster0.wyeg4.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+// const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+// client.connect(err => {
+//   const collection = client.db("test").collection("devices");
+//   client.close();
+// });
 
-const { MongoClient } = require('mongodb');
-const uri = "mongodb+srv://bulbul:nadeem%40123456@cluster0.wyeg4.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
-const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
-client.connect(err => {
-  const collection = client.db("test").collection("devices");
-  client.close();
-});
-
-// mongoose.connect('mongodb://localhost:27017/infograin?readPreference=primary&appname=MongoDB%20Compass&ssl=false', {
-//     useUnifiedTopology: true,
-//     useNewUrlParser: true
-//   })
-//   .then(() => {
-//     console.log('Connected to the Database successfully');
-//   }).catch((err)=>{
-//     console.log(err);
-//   });
+mongoose.connect('mongodb://localhost:27017/infograin?readPreference=primary&appname=MongoDB%20Compass&ssl=false', {
+    useUnifiedTopology: true,
+    useNewUrlParser: true
+  })
+  .then(() => {
+    console.log('Connected to the Database successfully');
+  }).catch((err)=>{
+    console.log(err);
+  });
 
 
 
 app.post("/send_mail",  (req, res) => {
-    console.log(req.params);
-
-    
+    console.log('item')
     var userData = {       
         firstName: req.body.FNAME,
        lastName:  req.body.LNAME,
@@ -44,7 +42,9 @@ app.post("/send_mail",  (req, res) => {
     }
     var myData = new Users(userData);
     myData.save().then(item => {
-        // console.log(item)
+        console.log(item)
+    console.log("testing item");
+
         // res.status(200).json({message:"item saved to database", data: item});
     }).catch(err => {
         console.log(err);
@@ -76,11 +76,10 @@ app.post("/send_mail",  (req, res) => {
         if (error) {
             res.send(error);
             console.log(error);
-    
         }
         else {
             console.log("Server is ready to take our messages");
-            return res.redirect("file:///C:/Users/Premlata/Desktop/infograins_blck_new/index.html#book-demo");
+            return res.redirect("ec2-65-0-43-174.ap-south-1.compute.amazonaws.com/index.html");
         }
     
     });
