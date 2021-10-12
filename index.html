@@ -32,6 +32,32 @@
 </head>
 
 <body class="home page-template-default page page-id-2">
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal_contentdiv">
+                    <div class="gitex_logodiv">
+                        <img src="assets/images/logo-trans.png" alt="gitex-logo">
+                    </div>
+                    <h2 class="modal_headtxt">Meet Us At GITEX Dubai 2021</h2>
+                    <div class="modal_portion">
+                        <!-- <span class="portion-1">Park Regis Business Bay</span>
+                        <span class="portion-2">|</span> -->
+                        <span class="portion-3">Stand Number Z5-294</span>
+                    </div>
+                    <div class="modal_date">17<sup>th</sup> - 20<sup>th</sup> Oct, 2021</div>
+                    <p class="modal_para">Schedule your meeting in advance to save your time and get the hassle free
+                        interaction with us at
+                        the event.</p>
+                    <p class="modal_para">We are available for you 24*7</p>
+                    <a href="https://calendly.com/infograinssoftware/15min" class="modal_btn">Schedule a meeting</a><br>
+                    <div class="address">Meeting : Park Regis Business Bay</div>
+                        
+                </div>
+            </div>
+        </div>
+    </div>
     <div id="page" class="site">
         <a class="skip-link screen-reader-text" href="#primary">Skip to content</a>
 
@@ -1185,6 +1211,18 @@
     <script type='text/javascript' src="assets/js/slick.min.js" id='slick-js-js'></script>
     <script type='text/javascript' src="assets/js/script.js" id='custom-js'></script>
     <script type='text/javascript' src="assets/js/infograins_sliders.js" id='infograins-sliders-js'></script>
+    <script>
+        $(document).ready(function () {
+             
+            $("#exampleModal").addClass("show");
+            $("#exampleModal").css('display', 'block');
+            $("#exampleModal").css('background-color', '#00000075');
+            $("#exampleModal").click(function () {
+                $("#exampleModal").css('display', 'none');
+            })
+            setTimeout(function(){ test(); });
+        });
+    </script>
 
 </body>
 <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"></script>

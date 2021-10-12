@@ -2425,3 +2425,97 @@ input:checked+.stylised-checkbox {
     box-shadow: 0 0 10px 0 rgb(0 0 0 / 20%);
     transition: .5s all ease;
 }
+
+/* ====================== Modal ====================== */
+@media (min-width: 576px){
+    .modal-dialog {
+        max-width: 50%;
+        margin: 1.75rem auto;
+    }
+}
+
+.modal_contentdiv{
+/* background-color: blanchedalmond; */
+background: linear-gradient(50deg, white,#d9b78a);
+/* background: linear-gradient(50deg, white,#dfc868); */
+padding: 50px;
+padding-bottom: 20px;
+text-align: center;
+}
+
+.gitex_logodiv{
+text-align: center;
+}
+
+.gitex_logodiv img{
+width: 200px;
+height: auto;
+}
+
+.modal_headtxt{
+font-weight: 900;
+font-family: 'Spartan', sans-serif;
+margin-top: 15px;
+}
+
+.modal_portion .portion-1{
+font-weight: 600;
+font-size: 18px;
+color: crimson;
+letter-spacing: .8px;
+}
+
+.address{
+font-weight: 600;
+font-size: 18px;
+margin-top: 18px;
+color: crimson;
+letter-spacing: .8px;
+}
+
+.modal_portion .portion-2{
+font-weight: bold;
+font-size: 22px;
+color: black;
+margin: 0px 15px;
+}
+
+.modal_portion .portion-3{
+font-weight: 600;
+font-size: 20px;
+letter-spacing: .8px;
+color: darkblue;
+}
+
+.modal_date{
+font-size: 25px;
+font-weight: bold;
+color: black;
+margin-top: 20px;
+font-family: 'Spartan', sans-serif;
+}
+
+.modal_para{
+font-size: 18px;
+color: black;
+letter-spacing: .6px;
+margin-top: 20px;
+font-weight: 500;
+}
+
+.modal_btn{
+padding: 10px 25px;
+border-radius: 25px;
+background-color: #00afef;
+text-transform: uppercase;
+color: #fff;
+font-weight: 600;
+border: none;
+outline: none;
+text-decoration: none;
+}
+
+.modal_btn:hover{
+color: #fff;
+opacity: .8;
+}
