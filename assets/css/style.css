@@ -2378,26 +2378,50 @@ input:checked+.stylised-checkbox {
 }
 
 
-.top_bar{
-    background: #222;
-    color: #fff;
-    padding: 2px 0;
-}
 
-.contact_deatils{
-    font-size: 14px;
+.top_nav_box {
     display: flex;
     align-items: center;
-    justify-content: right;
+    background: #ef6e10;
+    padding: 0 35px;
+    position: relative;
 }
-
-.top_bar b {
-    font-weight: 500;
-    margin-right: 5px;
+ 
+.top_nav_box a {
+    margin: 4px 0;
+    display: inline-block;
 }
-.contact_deatils a {
-    color: #fff !important;
-    font-weight: 400;
+.top_left_nav {
+    margin-left: 0;
+}
+ 
+.top_left_nav a {
     font-size: 13px;
-    margin: 0 5px;
+    color: #fff;
+    text-align: center;
+    transition: .5s all;
+}
+ 
+.top_left_nav a:hover {
+    font-weight: 600;
+    transition: .5s all ease;
+}
+ 
+.top_right_nav a {
+    color: #fff;
+    font-size: 15px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s all ease;
+}
+ 
+.top_right_nav a:hover {
+    color: #ef6e10;
+    background: #fff;
+    box-shadow: 0 0 10px 0 rgb(0 0 0 / 20%);
+    transition: .5s all ease;
 }
