@@ -687,7 +687,7 @@ section.contact-form-block {
 .site-main>section:first-child>.full-width-pane,
 .site-main>section:first-child>.left-pane,
 .site-main>section:first-child>.right-pane {
-    padding-top: 84px;
+    padding-top: 140px;
 }
 
 .button,
@@ -2377,11 +2377,27 @@ input:checked+.stylised-checkbox {
     border-radius: 50%;
 }
 
-.contact_deatils{
-    background: #fff;
-    font-size: 14px;
-}
 
 .top_bar{
-    background: #fff;
+    background: #222;
+    color: #fff;
+    padding: 2px 0;
+}
+
+.contact_deatils{
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.top_bar b {
+    font-weight: 500;
+    margin-right: 5px;
+}
+.contact_deatils a {
+    color: #fff !important;
+    font-weight: 400;
+    font-size: 13px;
+    margin: 0 5px;
 }
