@@ -2434,6 +2434,14 @@ input:checked+.stylised-checkbox {
     }
 }
 
+.modal-dialog.modal-dialog-centered{
+    justify-content: center;
+}
+
+.modal-content{
+    width: 90%;
+}
+
 .modal_contentdiv{
 /* background-color: blanchedalmond; */
 background: linear-gradient(50deg, white,#d9b78a);
@@ -2518,4 +2526,12 @@ text-decoration: none;
 .modal_btn:hover{
 color: #fff;
 opacity: .8;
+}
+@media screen and (max-width:425px) {
+    .modal_contentdiv{
+        padding: 20px;
+    }
+    .modal_headtxt{
+        font-size: 30px;
+    }
 }
